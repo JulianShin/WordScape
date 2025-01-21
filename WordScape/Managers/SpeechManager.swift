@@ -24,7 +24,6 @@ class SpeechManager: NSObject, @unchecked Sendable {
     // MARK: - Initialization
     override init() {
         super.init()
-        synthesizer.delegate = self
         startTTS() // TTS(Text-to-Speech) 초기화
         startSTT() // STT(Speech-to-Text) 초기화
     }
@@ -58,6 +57,7 @@ class SpeechManager: NSObject, @unchecked Sendable {
             case .authorized:
                 do {
                     try self.startRecording()
+					synthesizer.delegate = self
                 } catch {
                     print("Speech recognition failed to start: \(error.localizedDescription)")
                 }

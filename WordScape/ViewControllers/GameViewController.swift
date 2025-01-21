@@ -102,15 +102,15 @@ class GameViewController: UIViewController {
 		changeGameState(.playing)
 	}
 	
-	// MARK: - Game Control
-	/// 게임을 일시정지하고 현재 진행 중인 애니메이션의 상태를 저장
 	private struct AnimationState {
 		let translateX: CGFloat
 		let remainingTime: TimeInterval
 	}
 	
 	private var animationStates: [UIView: AnimationState] = [:]
-	
+
+	// MARK: - Game Control
+	/// 게임을 일시정지하고 현재 진행 중인 애니메이션의 상태를 저장
 	func pauseGame() {
 		changeGameState(.pause)
 		
