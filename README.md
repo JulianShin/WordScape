@@ -27,7 +27,7 @@ WordScape is an iOS game where players capture words by touching them. Players e
 - iPhone and iPad support
 </details>
 
-<details>
+<details open>
 <summary>한국어</summary>
 
 ## 소개
